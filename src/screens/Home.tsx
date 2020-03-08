@@ -1,8 +1,27 @@
 import * as React from 'react';
-import {Text} from 'react-native';
+import {Button, StyleSheet, View} from 'react-native';
 
-export class Home extends React.Component {
+interface Props {
+  navigation: any;
+}
+
+export class Home extends React.Component<Props> {
+  componentDidMount(): void {
+    console.warn('Home componentDidMount');
+  }
+
+  componentWillUnmount(): void {
+    console.warn('Home componentWillUnmount');
+  }
+
   render() {
-    return <Text>Hello world!</Text>;
+    return (
+      <View>
+        <Button
+          title={'User List'}
+          onPress={() => this.props.navigation.navigate('UserList')}
+        />
+      </View>
+    );
   }
 }
