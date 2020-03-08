@@ -19,6 +19,8 @@ const AppNavigator = createStackNavigator(
   },
   {
     initialRouteName: 'Home',
+    mode: 'modal',
+    cardOverlayEnabled: false,
   },
 );
 

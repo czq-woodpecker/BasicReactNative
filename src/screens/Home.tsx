@@ -7,11 +7,11 @@ interface Props {
 
 export class Home extends React.Component<Props> {
   componentDidMount(): void {
-    console.warn('Home componentDidMount');
+    console.log('Home componentDidMount');
   }
 
   componentWillUnmount(): void {
-    console.warn('Home componentWillUnmount');
+    console.log('Home componentWillUnmount');
   }
 
   render() {

@@ -7,11 +7,11 @@ interface Props {
 
 export class UserList extends React.Component<Props> {
   componentDidMount(): void {
-    console.warn('UserList componentDidMount');
+    console.log('UserList componentDidMount');
   }
 
   componentWillUnmount(): void {
-    console.warn('UserList componentWillUnmount');
+    console.log('UserList componentWillUnmount');
   }
 
   render() {
