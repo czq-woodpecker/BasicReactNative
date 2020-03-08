@@ -6,26 +6,25 @@
  * @flow
  */
 
-import React, {ReactNode} from 'react';
-import {SafeAreaView, StyleSheet, Text, StatusBar} from 'react-native';
+import React from 'react';
+import {createAppContainer, createStackNavigator} from 'react-navigation';
+import {Home} from './src/screens/Home';
 
-const App: () => ReactNode = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <Text style={styles.title}>Hello World!</Text>
-      </SafeAreaView>
-    </>
-  );
-};
-
-const styles = StyleSheet.create({
-  title: {
-    fontSize: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
+const AppNavigator = createStackNavigator(
+  {
+    Home: {
+      screen: Home,
+    },
   },
-});
+  {
+    initialRouteName: 'Home',
+  },
+);
 
-export default App;
+const AppContainer = createAppContainer(AppNavigator);
+
+export default class App extends React.Component {
+  render() {
+    return <AppContainer />;
+  }
+}
