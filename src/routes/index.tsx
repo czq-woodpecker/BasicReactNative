@@ -6,9 +6,15 @@ const AppNavigator = createStackNavigator(
   {
     Home: {
       screen: Home,
+      navigationOptions: {
+        title: 'Home',
+      },
     },
     UserList: {
       screen: UserList,
+      navigationOptions: {
+        title: 'UserList',
+      },
     },
   },
   {
