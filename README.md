@@ -1,2 +1,2 @@
 # BasicReactNative
-For learning react native
+React Native App基本模板
